@@ -36,11 +36,11 @@ function drawCheckBoxList() {
         groups.forEach(next => {
             let nextLi = document.createElement('li');
             let input = document.createElement('input');
-            let mouse = document.createElement('input');
-            //input.setAttribute("type", "checkbox");
-            mouse.appendChild(input);
-            mouse.appendChild(document.createTextNode(next));
-            nextLi.appendChild(mouse);
+            let div = document.createElement('div');
+            input.setAttribute("type", "checkbox");
+            div.appendChild(input);
+            div.appendChild(document.createTextNode(next));
+            nextLi.appendChild(div);
             ul.appendChild(nextLi);
         });
     }
@@ -116,10 +116,7 @@ function createSecondTable(toTable) {
              tr.appendChild(td);
          }
      table.appendChild(tr);
-
-         toTable.forEach(next=>{
-             let tr = document.createElement('tr');
-             strMatchesRes.forEach(strM=>{
+Each(strM=>{
                  let td = document.createElement('td');
                  td.innerText = next.get(strM);
                  tr.appendChild(td);
@@ -155,7 +152,7 @@ function getInfoAboutMatches(objArr) {
 
             if(str=='datetime'){
                 let date = new Date(next['datetime']);
-                currObj.set('datetime',date);
+                git config merge.conflictstyle diff3    currObj.set('datetime',date);
                 isHA = true;
             }
             if(!isHA) {
