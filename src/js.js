@@ -36,11 +36,11 @@ function drawCheckBoxList() {
         groups.forEach(next => {
             let nextLi = document.createElement('li');
             let input = document.createElement('input');
-            let div = document.createElement('div');
-            input.setAttribute("type", "checkbox");
-            div.appendChild(input);
-            div.appendChild(document.createTextNode(next));
-            nextLi.appendChild(div);
+            let mouse = document.createElement('input');
+            //input.setAttribute("type", "checkbox");
+            mouse.appendChild(input);
+            mouse.appendChild(document.createTextNode(next));
+            nextLi.appendChild(mouse);
             ul.appendChild(nextLi);
         });
     }
@@ -155,7 +155,7 @@ function getInfoAboutMatches(objArr) {
 
             if(str=='datetime'){
                 let date = new Date(next['datetime']);
-                git config merge.conflictstyle diff3    currObj.set('datetime',date);
+                currObj.set('datetime',date);
                 isHA = true;
             }
             if(!isHA) {
