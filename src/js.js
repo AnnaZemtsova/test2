@@ -155,7 +155,7 @@ function getInfoAboutMatches(objArr) {
 
             if(str=='datetime'){
                 let date = new Date(next['datetime']);
-                currObj.set('datetime',date);
+                git config merge.conflictstyle diff3    currObj.set('datetime',date);
                 isHA = true;
             }
             if(!isHA) {
