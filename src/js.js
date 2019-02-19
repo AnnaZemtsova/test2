@@ -116,7 +116,10 @@ function createSecondTable(toTable) {
              tr.appendChild(td);
          }
      table.appendChild(tr);
-Each(strM=>{
+
+         toTable.forEach(next=>{
+             let tr = document.createElement('tr');
+             strMatchesRes.forEach(strM=>{
                  let td = document.createElement('td');
                  td.innerText = next.get(strM);
                  tr.appendChild(td);
